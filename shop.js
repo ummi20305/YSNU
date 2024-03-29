@@ -28,10 +28,11 @@ function ready(){
 
 
 }
+
 // Add event listener to the "More info" buttons
 document.querySelectorAll('.moreinfo').forEach(function (btn) {
   btn.addEventListener('click', function () {
-      // Toggle the display of the pop-up box
+     
       var popup = btn.parentElement.querySelector('.popup');
       popup.style.display = (popup.style.display === 'block') ? 'none' : 'block';
   });
@@ -50,13 +51,13 @@ function removeCartItem(event) {
 
   function removeAllCartItems() {
     console.log("Empty cart event called");
-    // Assuming all cart items are children of the same parent element
+    
     var cartContainer = document.querySelector('#href5 .cart-content');
-    // Remove all child elements (cart items)
+   
     while (cartContainer.firstChild) {
         cartContainer.removeChild(cartContainer.firstChild);
     }
-    // Optionally, update the total or perform any other necessary actions
+    
     updateTotal();
 }
 
