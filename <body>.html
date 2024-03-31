@@ -179,7 +179,7 @@
   <div class="thumbnail-container">
     <!-- Thumbnail 1 -->
     <div class="thumbnail" data-description="Implementing sustainable farming methods such as crop rotation, organic farming, and agroforestry can enhance soil fertility, preserve natural resources, and ensure long-term food security, contributing to the goal of zero hunger." onclick="showExtendedView(1)">
-      <img src="agricultureal.jpeg" alt="Sustainable Agricultural Practices">
+      <img src="1.jpeg" id="1" alt="Sustainable Agricultural Practices">
       <div class="thumbnail-details">
         <h3>Cultivating a Greener Future</h3>
         <p>Explore sustainable farming practices contributing to environmental conservation and food security.</p>
@@ -187,7 +187,7 @@
     </div>
     <!-- Thumbnail 2 -->
     <div class="thumbnail" data-description="Supporting smallholder farmers with access to land, credit, technology, and market opportunities empowers them to increase productivity, diversify crops, and improve their livelihoods, ultimately reducing hunger and poverty in rural communities." onclick="showExtendedView(2)">
-      <img src="smallholder.jpeg" alt="Empowering Smallholder Farmers">
+      <img src="2.jpeg" id="2" alt="Empowering Smallholder Farmers">
       <div class="thumbnail-details">
         <h3>Empowering Smallholder Farmers</h3>
         <p>Learn how empowering smallholder farmers strengthens local economies and reduces hunger.</p>
@@ -195,7 +195,7 @@
     </div>
     <!-- Thumbnail 3 -->
     <div class="thumbnail" data-description="Implementing efficient post-harvest management techniques, investing in better storage facilities, and promoting consumer awareness campaigns can significantly reduce food loss and waste along the supply chain, thus maximizing food availability and accessibility for all." onclick="showExtendedView(3)">
-      <img src="postharvest.jpeg" alt="Food Waste Reduction">
+      <img src="3.jpeg" id="3" alt="Food Waste Reduction">
       <div class="thumbnail-details">
         <h3>Food Waste Reduction Strategies</h3>
         <p>Explore strategies to minimize food waste and maximize food availability for all.</p>
@@ -203,7 +203,7 @@
     </div>
     <!-- Thumbnail 4 -->
     <div class="thumbnail" data-description="Adapting farming practices to climate change challenges through drought-resistant crops, water-saving irrigation methods, and resilient farming techniques helps mitigate food insecurity by ensuring stable yields despite adverse environmental conditions." onclick="showExtendedView(4)">
-      <img src="climate.jpeg" alt="Climate Resilient Agriculture">
+      <img src="4.jpeg" id="4" alt="Climate Resilient Agriculture">
       <div class="thumbnail-details">
         <h3>Climate-Resilient Agriculture</h3>
         <p>Learn how climate-resilient farming practices ensure food security in the face of environmental challenges.</p>
@@ -211,7 +211,7 @@
     </div>
     <!-- Thumbnail 5 -->
     <div class="thumbnail" data-description="Promoting nutrition education, especially among vulnerable populations, and diversifying food production to include nutrient-rich crops like fruits, vegetables, and legumes, plays a crucial role in combating malnutrition and achieving zero hunger globally." onclick="showExtendedView(5)">
-      <img src="foodsecurity.jpeg" alt="Nutrition Education and Food Security">
+      <img src="5.jpeg"id="5" alt="Nutrition Education and Food Security">
       <div class="thumbnail-details">
         <h3>Nutrition Education and Food Security</h3>
         <p>Discover the importance of nutrition education in achieving food security and promoting healthier communities.</p>
@@ -231,7 +231,7 @@
       var extendedContent = document.getElementById("extended-content");
       var description = document.querySelector('.thumbnail[data-description]:nth-child(' + id + ')').getAttribute('data-description');
       extendedContent.innerHTML = `
-        <img src="agricultural-${id}.jpg" alt="Extended View Image">
+        <img src="${id}.jpeg" alt="Extended View Image">
         <h2>Detailed Description</h2>
         <p>${description}</p>
       `;
