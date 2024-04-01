@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <header>
+        <h1>United Prosperity Planet</h1>
+        <img src="logo.png" title = "United Prosperity World Logo" class="logo">  
+        <nav class="navbar">
+             <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="content.html">Contents Page</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="pageEditor.html"> Page Editor </a></li>
+                <li><a href="profile.html"> User Profile</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+       .logo {
+            max-width: 200px; 
+            height: auto; /* used to keep logo at normal size */
+            display: inline-block; 
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%; /* prevents images from taking up too much space */
+            height: 190px; /* used to change height of images */
+            display: inline-block; /* displays images in a row */
+            margin: 0 10px; /* adds space between images */
+        }
+
+        #member-details {
+            margin-top: 20px; /* creates space between images and text */
+            margin: 20px auto; /* centeres images */
+            padding: 10px;
+            border: 2px solid #ffffff; /* adds small border around the details box*/
+            width: 300px; /* sets the width of the details box*/
+            background-color: #00ccff; /* sets backround colour of details box*/
+        }
+    </style>
+
+</head>
+<body>
+    <p>Student Details</p>
+    <br>
+    <p>Hover over images to see more details about us!</p>
+    <br>
+
+    <img src="ST1.jpg" alt="Student 1 picture" onmouseover="showDetails('Umayma Jabbar', 'Student 1', 'Splash Screen & Shop')"> <!-- displays image and when mouse is over it, the function showdetails is called and the infor is passed as parameters-->
+    <img src="ST2.jpg" alt="Student 2 picture" onmouseover="showDetails('Sikandar Ali', 'Student 2', 'Home Page + Navigation Bar & Feedback')">
+    <img src="ST3.jpg" alt="Student 3 picture" onmouseover="showDetails('Mahammed Ahmed', 'Student 3', 'User profile & Team')">
+    <img src="ST4.jpg" alt="Student 4 picture" onmouseover="showDetails('Youssif Zaki', 'Student 4', 'Sitemap & Gallery')">
+
+    <div id="member-details"></div> 
+
+    <script>
+       function showDetails(name, student, tasks) { // parameters recived here 
+           
+            let detailsContainer = document.getElementById("member-details"); // container for the info is gotten
+
+            detailsContainer.innerHTML = "<h3>" + name + "</h3>" + "<p><strong>Role:</strong> " + student + "</p>" + "<p><strong>Tasked with:</strong> " + tasks + "</p>"; // parameters displayed by concatonating details to the paragrapgh
+
+        }
+    </script>
+
+    <hr>
+
+    <a href="https://www.freepik.com/free-vector/happy-girl-with-casual-clothe-hairstyle_5006032.htm#position=10">Image by stockgiu on Freepik</a> <!-- reference links for images used -->
+    <a href="https://www.freepik.com/free-vector/blond-man-with-eyeglasses-icon-isolated_68190105.htm#position=2">Image by djvstock on Freepik</a>
+    <a href="https://www.freepik.com/free-vector/young-student-boy_60926719.htm#position=11">Image by studiogstock on Freepik</a>
+    <a href="https://www.freepik.com/free-vector/student-boy-with-book_60926733.htm#position=13">Image by studiogstock on Freepik</a>
+
+</body>
+</html>
