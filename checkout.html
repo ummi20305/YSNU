@@ -31,10 +31,11 @@
 
 
             <link rel="stylesheet" type="text/css" href="shop.css"/>
+            
 
 
     </head>
-
+<body>
         <section>
             <div class="checkout-section">
                 <h2 class="cart-title"> <i class='bx bxs-donate-heart heart'></i>Checkout</h2>
@@ -101,7 +102,7 @@
 
 
 
-                            <td rowspan="2"> <fieldset class="paymentdetail" id="PaymentDetails">
+                            <td> <fieldset class="paymentdetail" id="PaymentDetails">
                         <legend class="header">Payment Details</legend>
         
                         <fieldset class="fieldset2" id="paymentinformation">
@@ -152,6 +153,19 @@
                                 <input type="email" id="email" name="email">
                                 <br>
                                 <br>
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+
+                                <div id="message">
+                                    <h3>Password must contain the following:</h3>
+                                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                                    <p id="number" class="invalid">A <b>number</b></p>
+                                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                                  </div>
+
+                                <br>
+                                <br>
                                 <input type="reset" id="resetcontactdetail" value="Clear Fields">
                                 <input type="submit" id="submit" value="submit" >
             
@@ -189,5 +203,5 @@
                 
             </div>
         </div>
-    <script src="checkout.js"></script>
-    </body>
+    <script src="shopfinal.js"></script>
+ </body>
