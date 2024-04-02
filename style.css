@@ -83,24 +83,71 @@ main{
 .img{
     float: left;
 }
-.feedback{
-    background:none
+.feedback-page{
+    background-image: none;
+    text-align: center;
 }
+.feedback-page p{
+    color: black;
+}
+.content-page{
+    text-align: center;
+}
+.page-editor{
+    background-image: none;
+    text-align: center;
+}
+.page-editor p{
+    color: black;
+}
+.page-editor .section {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Define different background colors for each section */
+.page-editor .home {
+    background-color: #e6f7ff; 
+}
+
+.page-editor .feedback {
+    background-color: #e6f7ff; 
+}
+
+
 p{
     margin: 0px;
     color: whitesmoke;
     text-align: center;
 }
-
-footer{
+#scrollBtn {
+    display: none;
     position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 999; /* Ensure the button stays above other content */
+  }
+  
+#scrollBtn:hover {
+    background-color: #555; /* Darken the button color on hover */
+  }
+  
+footer{
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 10px 0;
     bottom: 0;
     width: 100%;
     margin: 0%;
     display: block;
     clear: both;
     background-color: rgb(255, 168, 7);
+    z-index: 999;
 
 }

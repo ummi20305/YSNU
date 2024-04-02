@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type ="image/png" href="favicon logo.png"> <!--This is for a little web icon called a favicon to be displayed at the top of the tab-->
+    <script src="script.js" defer></script>
+    <script src="scroll.js" defer></script>
+</head>
+<body class="feedback-page">
+    <header>
+        <h1>United Prosperity Planet</h1>
+        <img src="logo.png" title="United Prosperity World Logo" class="logo">  
+        <nav class="navbar">
+            <ul>
+               <li><a href="https://w2045732.users.ecs.westminster.ac.uk/webDev2024/home.html">Home</a></li>
+               <li><a href="https://w1969488.users.ecs.westminster.ac.uk/webDev/coursework/content%20pagess/content_pages">Contents Page</a></li>
+               <li><a href="https://w2039965.users.ecs.westminster.ac.uk/webDev/gallery.html">Gallery</a></li>
+               <li><a href="https://w2045732.users.ecs.westminster.ac.uk/webDev2024/feedback.html">Feedback</a></li>
+               <li><a href="https://w1969488.users.ecs.westminster.ac.uk/webDev/coursework/shop/shop.html">Shop</a></li>
+               <li><a href="https://w1969488.users.ecs.westminster.ac.uk/webDev/coursework/page%20editorss/page%20editor.html"> Page Editor </a></li>
+               <li><a href="https://w1978999.users.ecs.westminster.ac.uk/WebDev/profile.html"> User Profile</a></li>
+               <li><a href="https://w1978999.users.ecs.westminster.ac.uk/WebDev/team.html">Team</a></li>
+               <li><a href="https://w2039965.users.ecs.westminster.ac.uk/webDev/sitemap.html">Sitemap</a></li>
+           </ul>
+       </nav>
+    </header>
+
+    <form onsubmit="sendEmail(); reset(); return false;">
+        <h1>Welcome to the Feedback Page</h1>
+        <h1>Feedback Form</h1>
+        <label for="fullname">Enter your full name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter Names Here">
+        <br>
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Email Here">
+        <br>
+        <label for="phone">Enter your Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter Phone Number Here">
+        <p>Was this your first time visiting this website?</p>
+        <label>
+            <input type="radio" name="first-time" value="yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="first-time" value="no"> No
+        </label>
+        <br>
+        <p>Was this website easy to navigate?</p>
+        <label>
+            <input type="radio" name="navigate" value="yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="navigate" value="no"> No
+        </label>
+        <br>
+        <label for="explanation">If no, please explain why:</label>
+        <br>
+        <textarea id="explanation" name="explanation" placeholder="Explain here:"></textarea>
+        <br>
+        <label for="rating">How would you rate the website so far (1 to 10)?</label>
+        <div id="rating">
+            <input type="radio" id="rating1" name="rating" value="1">
+            <label for="rating1">1</label>
+            <input type="radio" id="rating2" name="rating" value="2">
+            <label for="rating2">2</label>
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3">3</label>
+            <input type="radio" id="rating4" name="rating" value="4">
+            <label for="rating4">4</label>
+            <input type="radio" id="rating5" name="rating" value="5">
+            <label for="rating5">5</label>
+            <input type="radio" id="rating6" name="rating" value="6">
+            <label for="rating6">6</label>
+            <input type="radio" id="rating7" name="rating" value="7">
+            <label for="rating7">7</label>
+            <input type="radio" id="rating8" name="rating" value="8">
+            <label for="rating8">8</label>
+            <input type="radio" id="rating9" name="rating" value="9">
+            <label for="rating9">9</label>
+            <input type="radio" id="rating10" name="rating" value="10">
+            <label for="rating10">10</label>
+        </div>
+        <p>Would you recommend our services?</p>
+        <label>
+            <input type="radio" name="services" value="yes"> Yes
+        </label>
+        <label>
+            <input type="radio" name="services" value="no"> No
+        </label>
+        <p>Would you like to receive updates via email?</p>
+        <select name="receive-updates">
+            <option value="yes">Yes, please send me updates</option>
+            <option value="no">No, I don't want to receive updates</option>
+        </select>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "unitedprosperityworld@gmail.com",
+                Password: "FE571F4B7135D3E1483CAC28CDACC8F37530",
+                To: 'alissikandar7788@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "Feedback Form United Prosperity World",
+                Port:2525,
+                Body: "Feedback details: \n\n" +
+                    "Full Name: " + document.getElementById("fullname").value + "\n" +
+                    "Email: " + document.getElementById("email").value + "\n" +
+                    "Phone: " + document.getElementById("phone").value + "\n" +
+                    "First Time Visit: " + document.querySelector('input[name="first-time"]:checked').value + "\n" +
+                    "Easy Navigation: " + document.querySelector('input[name="navigate"]:checked').value + "\n" +
+                    "Explanation: " + document.getElementById("explanation").value + "\n" +
+                    "Rating: " + document.querySelector('input[name="rating"]:checked').value + "\n" +
+                    "Recommend Services: " + document.querySelector('input[name="services"]:checked').value + "\n" +
+                    "Receive Updates: " + document.querySelector('select[name="receive-updates"]').value
+                
+            }).then(
+                message => alert("Thank you for your feedback!")
+            );
+        }
+    </script>
+
+    
+    <button id="scrollBtn" onclick="scrollToTop()">Back to Top</button>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+    <footer> 
+        <h2>Website is created by Group YSNU</h2>
+        <pre>
+        Contact: 
+        UnitedProsperityWorld ltd
+        <a href="mailto:unitedprosperityworld@gmail.com">Email us at United Prosperity World</a>
+        Phone: 0201234567
+        </pre>
+        <p>Page by Sikandar Ali</p>
+    </footer>
+</body>
+</html>
